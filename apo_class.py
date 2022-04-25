@@ -5,8 +5,9 @@ from vk_api.longpoll import *
 from vk_api.utils import *
 import sqlite3
 class Apostol_host(object):
-    def __init__(self, token):
+    def __init__(self, token, chat_id):
         self.token = token
+        self.chat_id = chat_id
         self.vk_session = vk_api.VkApi (token=token)
         self.longpoll = VkLongPoll (self.vk_session)
         self.vk = self.vk_session.get_api ()
@@ -43,9 +44,10 @@ class Apostol_host(object):
                                         'attachment': att})
 
 class Apostol(object):
-    def __init__(self, token):
+    def __init__(self, token, chat_id):
         try:
             self.token = token
+            self.chat_id = chat_id
             self.vk_session = vk_api.VkApi (token=token)
             self.longpoll = VkLongPoll (self.vk_session)
             self.vk = self.vk_session.get_api ()
