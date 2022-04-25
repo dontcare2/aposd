@@ -13,7 +13,7 @@ import re
 import sqlite3
 from bs4 import BeautifulSoup
 import apos_q
-group_tok = '6b1200b980bc609b80e7855ae22a7ff82bf1c303c20f208d28d4c2d6d53077743a66615554475a1f520fd'
+group_tok = '5d1cd3d8fa732ab7937cbdb3d5180d0503d762dfa4c9c9c958633579e213bbdec3a4dc98caa92718fc80e'
 
 class BotLongPoll(VkBotLongPoll):
     def listen(self):
@@ -275,7 +275,7 @@ def getApo():
 
 #sender(1, 'test!')
 def main():
-    group_tok = '6b1200b980bc609b80e7855ae22a7ff82bf1c303c20f208d28d4c2d6d53077743a66615554475a1f520fd'
+    group_tok = '5d1cd3d8fa732ab7937cbdb3d5180d0503d762dfa4c9c9c958633579e213bbdec3a4dc98caa92718fc80e'
 
     bot_vk_session = vk_api.VkApi(token=group_tok)
     Bot_longpoll = BotLongPoll(bot_vk_session, 212374607)               # Это лонгпулл группы
